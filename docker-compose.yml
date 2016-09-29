@@ -1,0 +1,13 @@
+version: "2"
+services:
+  ebs-backup:
+    build: .
+    tty: true
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_REGION
+      - AWS_DEFAULT_REGION
+      - EBS_BACKUP_REGIONS
+      - EBS_BACKUP_INTERVAL_SECS
+      - EBS_BACKUP_DRY_RUN
