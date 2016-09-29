@@ -4,7 +4,7 @@ Automatic EBS Snapshots
 This service automatically creates regular snapshots of EBS volumes based on a schedule specified by a tag on the volume.
 It also purges snapshots based on a specified retention period, again specified by a tag on the volume.
 
-It's currently distributed as a Docker container, but can create a gem if there's interest.
+It's currently distributed as a Docker container, but it could be distributed as a gem as well in the future.
 
 # Running
 ## Tag Your Volumes
