@@ -23,6 +23,25 @@ The following environment variables are required:
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
 
+These should be AWS credentials with the following permissions:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:CreateSnapshot",
+        "ec2:CreateTags",
+        "ec2:DescribeSnapshots",
+        "ec2:DescribeVolumes"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
 The following environment variables are optional:
 - AWS_REGION - Region to make backups in. Required if you don't specify EBS_BACKUP_REGIONS.
 - EBS_BACKUP_REGIONS - Comma separated list of AWS regions to make backups in. Required if you don't specify AWS_REGION.
